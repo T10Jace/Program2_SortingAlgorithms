@@ -16,12 +16,16 @@
 #include "merge_sort.h"
 #include "quicksort.h"
 #include "selection_sort.h"
+#include "insertion_sort.h"
+#include "bubble_sort.h"
+#include "counting_sort.h"
+#include "radix_sort.h"
 
 using namespace std;
 
 int main(int argc, char **argv)
 {
-    // Get the number to run.
+    // Get the number of elements to sort.
     unsigned int n = 100;
     if (argc == 2) {
         n = stoi(argv[1]);
@@ -45,6 +49,24 @@ int main(int argc, char **argv)
 
     // Selection Sort B
     t.run("Selection Sort B", selectionSortB);
+
+    // Insertion Sort
+    t.run("Insertion Sort", insertionSort);
+
+    // Bubble Sort A (Without Swap Detection)
+    t.run("Bubble Sort A", bubbleSortA);
+
+    // Bubble Sort B (With Swap Detection - left to right)
+    t.run("Bubble Sort B", bubbleSortB);
+
+    // Bubble Sort C (With Swap Detection - right to left)
+    t.run("Bubble Sort C", bubbleSortC);
+
+    // Counting Sort (requires max value, assume max value 10000 for this example)
+    t.run("Counting Sort", [](std::vector<int>& ar) { countingSort(ar, 10000); });
+
+    // Radix Sort (using binary radix)
+    t.run("Radix Sort", radixSort);
 
     return 0;
 }
