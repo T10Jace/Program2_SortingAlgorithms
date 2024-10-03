@@ -26,7 +26,7 @@ using namespace std;
 int main(int argc, char **argv)
 {
     // Get the number of elements to sort.
-    unsigned int n = 100;
+    unsigned int n = 1000000;
     if (argc == 2) {
         n = stoi(argv[1]);
     }
@@ -45,22 +45,22 @@ int main(int argc, char **argv)
     t.run("Quick Sort", quicksort);
 
     // Selection Sort A
-    t.run("Selection Sort A", selectionSortA);
+ //   t.run("Selection Sort A", selectionSortA);
 
     // Selection Sort B
-    t.run("Selection Sort B", selectionSortB);
+  //  t.run("Selection Sort B", selectionSortB);
 
     // Insertion Sort
-    t.run("Insertion Sort", insertionSort);
+ //   t.run("Insertion Sort", insertionSort);
 
     // Bubble Sort A (Without Swap Detection)
-    t.run("Bubble Sort A", bubbleSortA);
+  //  t.run("Bubble Sort A", bubbleSortA);
 
     // Bubble Sort B (With Swap Detection - left to right)
-    t.run("Bubble Sort B", bubbleSortB);
+   // t.run("Bubble Sort B", bubbleSortB);
 
     // Bubble Sort C (With Swap Detection - right to left)
-    t.run("Bubble Sort C", bubbleSortC);
+  //  t.run("Bubble Sort C", bubbleSortC);
 
     // Counting Sort (requires max value, assume max value 10000 for this example)
     t.run("Counting Sort", [](std::vector<int>& ar) { countingSort(ar, 10000); });
