@@ -26,7 +26,7 @@ using namespace std;
 int main(int argc, char **argv)
 {
     // Get the number of elements to sort.
-    unsigned int n = 1000000;
+    unsigned int n = 100;
     if (argc == 2) {
         n = stoi(argv[1]);
     }
